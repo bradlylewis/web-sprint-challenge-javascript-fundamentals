@@ -108,6 +108,10 @@ const zooAnimals = [
     const animalShortage = data.filter(item => item.population < 5);
     return animalShortage;
   }
+
+  // console.log(lowPopulationAnimals(zooAnimals));
+
+  // Filter will look through the entire passed in dataset and return a new array - not modifying the original - based on the set conditions.
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -116,8 +120,9 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(data){
+    const totalPop = data.reduce((accumulator, item) => item.population + accumulator, 0);
+    return totalPop;
   }
   
   
