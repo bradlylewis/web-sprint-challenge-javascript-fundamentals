@@ -74,9 +74,11 @@ const zooAnimals = [
     data.forEach(function(key){
       return displayNames.push("name: " + key.animal_name + ", scientific: " + key.scientific_name);
     });
-    console.log(displayNames);
+    // console.log(displayNames);
     return displayNames;
   }
+
+  // console.log(animalName(zooAnimals))
 
   // We use forEach to cycle through to whole object and the function inside will add to our new array everytime it runs through. We set it to add a string with the name and scientific name. Then we make our first function return that array of strings.
   
@@ -87,9 +89,14 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(data){
+    const newArray = data.map(function(key){
+      return key.animal_name.toLowerCase()
+    });
+    return newArray;
   }
+
+  console.log(lowerCaseNames(zooAnimals))
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
