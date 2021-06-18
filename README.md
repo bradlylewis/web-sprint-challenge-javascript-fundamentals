@@ -29,13 +29,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+Both of these go through an array and search for something. The difference is that .forEach has the ability to manipulate the passing array and .map returns a completely new array by returning data on every element.
+
 2. Explain the difference between a callback and a higher order function.
 
-3. Can you explain what a closure is and how you used it in the counter function? 
+An HOF is seen as a template function that you pass callback functions into.
+
+3. Can you explain what a closure is and how you used it in the counter function?
+
+A closure is when an inner function draws in information from an outside function. It occurs when you have functions bundled together in a lexical environment. This ensures you don't have to redefine a variable when you build within the parent function.
 
 4. Describe the four principles of the 'this' keyword.
 
+i) Window binding occurs whenever a function is contained in the global scope.
+ii) Implicit binding refers to the object to the left of the '.'
+iii) Explicit binding is whenever you have to use .call or .apply or .bind to receive a function
+iV) WHenever you call a function with the 'new' keyword, .this points to the new function.
+
 5. Why do we need super() in an extended class?
+
+Super is used to pass any arguments from our child function into our parent function. Extends is what lets the child function know who it's parent is.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
