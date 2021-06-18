@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// Nested functions can access variables things outward, but variables can not access variables inward. This is called closure.
 
 
 
@@ -28,10 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let counter = 0;
+  for (let i = 0; i <= number; i ++){
+    counter += i;
   }
+return counter;
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,9 +59,26 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  // function animalNames(data){
+  //   const displayNames = [];
+  //   data.forEach(key => displayNames.push( // using arrow function
+  //     "name: " + key.animal_name + 
+  //     ", scientific: " + key.scientific_name
+  //   ));
+  //   console.log(displayNames);
+  //   return displayNames;
+  // }
+
+  function animalNames(data){
+    const displayNames = [];
+    data.forEach(function(key){
+      return displayNames.push("name: " + key.animal_name + ", scientific: " + key.scientific_name);
+    });
+    console.log(displayNames);
+    return displayNames;
   }
+
+  // We use forEach to cycle through to whole object and the function inside will add to our new array everytime it runs through. We set it to add a string with the name and scientific name. Then we make our first function return that array of strings.
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
